@@ -8,7 +8,7 @@ const UserImage = ({ image, size = "60px" }) => {
 				width={size}
 				height={size}
 				alt="user"
-				src={`https://easy-posting-server.vercel.app/assets/${image}`}
+				src={`https://easy-posting-server-asadrayat.vercel.app/assets/${image}`}
 			/>
 		</Box>
 	);

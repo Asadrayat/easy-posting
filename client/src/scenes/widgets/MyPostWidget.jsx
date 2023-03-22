@@ -24,7 +24,6 @@ import WidgetWrapper from "components/WidgetWrapper";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setPosts } from "state";
-import { toast, Toaster } from "react-hot-toast";
 
 const MyPostWidget = ({ picturePath }) => {
 	const dispatch = useDispatch();
@@ -37,7 +36,6 @@ const MyPostWidget = ({ picturePath }) => {
 	const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
 	const mediumMain = palette.neutral.mediumMain;
 	const medium = palette.neutral.medium;
-	const notify = () => toast('Post Submitted.');
 
 	const handlePost = async () => {
 		const formData = new FormData();
@@ -48,7 +46,7 @@ const MyPostWidget = ({ picturePath }) => {
 			formData.append("picturePath", image.name);
 		}
 
-		const response = await fetch(`https://easy-posting-server.vercel.app/posts`, {
+		const response = await fetch(`${process.env.REACT_APP_URL}/posts`, {
 			method: "POST",
 			headers: { Authorization: `Bearer ${token}` },
 			body: formData,
@@ -158,10 +156,7 @@ const MyPostWidget = ({ picturePath }) => {
 
 				<Button
 					disabled={!post}
-					onClick={() => {
-						handlePost();
-						notify()
-					}}
+					onClick={handlePost}
 					sx={{
 						color: palette.background.alt,
 						backgroundColor: palette.primary.main,
@@ -170,29 +165,6 @@ const MyPostWidget = ({ picturePath }) => {
 				>
 					POST
 				</Button>
-				<Toaster position="top-center"
-					reverseOrder={false}
-					gutter={8}
-					containerClassName=""
-					containerStyle={{}}
-					toastOptions={{
-						// Define default options
-						className: '',
-						duration: 5000,
-						style: {
-							background: '#ec00a2',
-							color: '#ffffff',
-						},
-
-						// Default options for specific types
-						success: {
-							duration: 3000,
-							theme: {
-								primary: 'green',
-								secondary: 'black',
-							},
-						},
-					}} />
 			</FlexBetween>
 		</WidgetWrapper>
 	);

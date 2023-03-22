@@ -13,7 +13,7 @@ const FriendListWidget = ({ userId }) => {
 
 	const getFriends = async () => {
 		const response = await fetch(
-			`https://easy-posting-server.vercel.app/users/${userId}/friends`,
+			`https://easy-posting-server-asadrayat.vercel.app/users/${userId}/friends`,
 			{
 				method: "GET",
 				headers: { Authorization: `Bearer ${token}` },
