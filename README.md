@@ -12,4 +12,7 @@ Its a social media application where user can add post, make friends,create post
  
 
 - email: leo@messi.com
-- pass: 123456
+- password: 123456
+- email: safa2@kabir.com
+- password: 123456
+- if facing any problem in registration please login with above email and password
