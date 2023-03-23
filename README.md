@@ -6,7 +6,7 @@ Its a social media application where user can add post, make friends,create post
 
 ## Acknowledgements
 
- - [Live Link](https://mellow-crumble-59ce53.netlify.app)
+ - [Live Link](https://easy-frontend.onrender.com)
 
 
  
