@@ -3,6 +3,8 @@
 
 Its a social media application where user can add post, make friends,create post, like post and many other functionalities
 
+- [Live](https://easy-frontend.onrender.com/)
+
 
 ## Technologies
 
