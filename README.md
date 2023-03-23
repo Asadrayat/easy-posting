@@ -16,10 +16,10 @@ Its a social media application where user can add post, make friends,create post
 
 ## Accounts to use
 
-emai:  safa2@kabir.com:
+emai:  safa2@kabir.com
 
 password: 123456
 
-emai:  leo@messi.com:
+emai:  leo@messi.com
 
 password: 123456
